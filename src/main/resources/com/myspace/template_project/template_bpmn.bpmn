@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:g="http://www.jboss.org/drools/flow/gpd" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.jboss.org/drools" id="Definition" targetNamespace="http://www.jboss.org/drools" typeLanguage="http://www.java.com/javaTypes" expressionLanguage="http://www.mvel.org/2.0" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+
+  <process processType="Private" isExecutable="true" id="com.ibm.ce.mvp3.Squid" name="Squid" tns:packageName="com.ibm.ce">
+
+    <extensionElements>
+     <tns:import name="org.kie.api.runtime.process.CaseAssignment"/>
+     <tns:import name="org.kie.api.runtime.process.CaseData"/>
+    </extensionElements>
+    <laneSet>
+      <lane name="Gohan" id="398a9270-a415-416e-9a56-782bf7ab58b4">
+        <flowNodeRef>_jbpm-unique-39</flowNodeRef>
+        <flowNodeRef>_jbpm-unique-38</flowNodeRef>
+        <flowNodeRef>_jbpm-unique-36</flowNodeRef>
+        <flowNodeRef>_jbpm-unique-37</flowNodeRef>
+        <flowNodeRef>_jbpm-unique-41</flowNodeRef>
+        <flowNodeRef>_jbpm-unique-40</flowNodeRef>
+      </lane>
+    </laneSet>
+    <!-- nodes -->
+    <userTask id="_jbpm-unique-39" name="CP4D">
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+    </userTask>
+    <endEvent id="_jbpm-unique-38" name=""/>
+    <startEvent id="_jbpm-unique-36" name="Start" isInterrupting="false">
+    </startEvent>
+    <endEvent id="_jbpm-unique-37" name=""/>
+    <inclusiveGateway id="_jbpm-unique-41" name="Route This Way" gatewayDirection="Diverging">
+    </inclusiveGateway>
+    <userTask id="_jbpm-unique-40" name="CP4BA">
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+    </userTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_jbpm-unique-41-_jbpm-unique-39" sourceRef="_jbpm-unique-41" targetRef="_jbpm-unique-39" name="Ganesha">
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.jboss.org/drools/rule"/>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-40-_jbpm-unique-38" sourceRef="_jbpm-unique-40" targetRef="_jbpm-unique-38"/>
+    <sequenceFlow id="_jbpm-unique-39-_jbpm-unique-37" sourceRef="_jbpm-unique-39" targetRef="_jbpm-unique-37"/>
+    <sequenceFlow id="_jbpm-unique-36-_jbpm-unique-41" sourceRef="_jbpm-unique-36" targetRef="_jbpm-unique-41"/>
+    <sequenceFlow id="_jbpm-unique-41-_jbpm-unique-40" sourceRef="_jbpm-unique-41" targetRef="_jbpm-unique-40" name="Maui">
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.jboss.org/drools/rule"/>
+    </sequenceFlow>
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.ibm.ce.mvp3.Squid">
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-39">
+        <dc:Bounds x="400" y="115" width="150" height="75"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-38">
+        <dc:Bounds x="575" y="215" width="48" height="48"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-36">
+        <dc:Bounds x="50" y="115" width="48" height="48"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-37">
+        <dc:Bounds x="575" y="115" width="48" height="48"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-41">
+        <dc:Bounds x="225" y="115" width="48" height="48"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-40">
+        <dc:Bounds x="400" y="215" width="150" height="75"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-41-_jbpm-unique-39">
+        <di:waypoint x="245" y="135"/>
+        <di:waypoint x="475" y="152"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-40-_jbpm-unique-38">
+        <di:waypoint x="475" y="252"/>
+        <di:waypoint x="595" y="235"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-39-_jbpm-unique-37">
+        <di:waypoint x="475" y="152"/>
+        <di:waypoint x="595" y="135"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-36-_jbpm-unique-41">
+        <di:waypoint x="70" y="135"/>
+        <di:waypoint x="245" y="135"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-41-_jbpm-unique-40">
+        <di:waypoint x="245" y="135"/>
+        <di:waypoint x="475" y="252"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>
